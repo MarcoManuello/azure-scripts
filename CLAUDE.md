@@ -29,8 +29,20 @@ Connect-ExchangeOnline
 Connect-AzureAD
 ```
 
+## Git Sync Commands
+```powershell
+# When starting work on any machine:
+.\Sync-GitRepo.ps1 -Start
+
+# When finishing work on any machine:
+.\Sync-GitRepo.ps1 -Finish -Message "Description of changes"
+
+# Quick finish with auto-generated message:
+.\Sync-GitRepo.ps1 -Finish
+```
+
 ## Git Configuration
-- **Repository**: Not yet connected to remote
+- **Repository**: https://github.com/MarcoManuello/azure-scripts
 - **Branch**: main
 - **Author**: Marco Manuello (marco@manuello.com)
 

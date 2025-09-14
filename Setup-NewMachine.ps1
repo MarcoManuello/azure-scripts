@@ -78,7 +78,7 @@ Write-Success "✓ Git settings configured"
 
 # Create project structure
 Write-Info "`nSetting up project directories..."
-$projectBase = "C:\Users\$env:USERNAME\OneDrive\Documents\Projects"
+$projectBase = "C:\Users\$env:USERNAME\OneDrive - Privately Managed\Documents\Projects"
 
 if (-not (Test-Path $projectBase)) {
     New-Item -ItemType Directory -Path $projectBase -Force | Out-Null

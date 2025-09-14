@@ -58,7 +58,7 @@ try {
         
         # Pull latest changes
         git pull origin main
-        Write-Success "✓ Successfully pulled latest changes"
+        Write-Success "Successfully pulled latest changes"
         
         # Show recent commits
         Write-Info "`nRecent updates:"
@@ -83,12 +83,12 @@ try {
         
         # Commit with message
         git commit -m $Message
-        Write-Success "✓ Changes committed"
+        Write-Success "Changes committed"
         
         # Push to GitHub
         Write-Info "Pushing to GitHub..."
         git push origin main
-        Write-Success "✓ Successfully pushed to GitHub"
+        Write-Success "Successfully pushed to GitHub"
         
         # Update CLAUDE.md with last sync time
         $claudePath = ".\CLAUDE.md"
@@ -98,9 +98,9 @@ try {
             
             if ($content -match '## Recent Changes\r?\n(.*?)\r?\n\r?\n') {
                 $existingChanges = $Matches[1]
-                $newContent = $content -replace '## Recent Changes\r?\n.*?\r?\n\r?\n', "## Recent Changes`n$existingChanges`n- $newDate`: $Message`n`n"
+                $newContent = $content -replace '## Recent Changes\r?\n.*?\r?\n\r?\n', "## Recent Changes`n$existingChanges`n- ${newDate}: $Message`n`n"
             } else {
-                $newContent = $content -replace '## Recent Changes\r?\n', "## Recent Changes`n- $newDate`: $Message`n"
+                $newContent = $content -replace '## Recent Changes\r?\n', "## Recent Changes`n- ${newDate}: $Message`n"
             }
             
             Set-Content -Path $claudePath -Value $newContent -NoNewline
@@ -111,6 +111,6 @@ try {
     }
     
 } catch {
-    Write-Error "Git operation failed: $_"
+    Write-Error "Git operation failed. Check your Git configuration and network connection."
     exit 1
 }
