@@ -1,0 +1,31 @@
+# PowerShell Module Cache
+*.psd1.cache
+*.psm1.cache
+
+# Credentials and Secrets
+*.pfx
+*.cer
+*.key
+secrets.json
+credentials.json
+config.local.json
+
+# Logs
+*.log
+logs/
+
+# Test Results
+TestResults.xml
+coverage.xml
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+temp/
