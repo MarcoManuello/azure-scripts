@@ -48,6 +48,7 @@ Connect-AzureAD
 
 ## Recent Changes
 - 2025-09-14: Initial project setup and Git repository created
+- 2025-09-13 22:55: Update OneDrive path and fix script quotes
 
 ## Notes for Claude
 - This project focuses on Azure and O365 administration tasks
