@@ -47,6 +47,7 @@ Connect-AzureAD
 - **Author**: Marco Manuello (marco@manuello.com)
 
 ## Recent Changes
+- 2025-09-16 08:41: Updates from MarcoX1 at 2025-09-16 08:41
 - 2025-09-14: Initial project setup and Git repository created
 - 2025-09-13 22:55: Update OneDrive path and fix script quotes
 
